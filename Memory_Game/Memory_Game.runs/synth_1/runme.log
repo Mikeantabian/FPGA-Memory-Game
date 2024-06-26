@@ -1,0 +1,303 @@
+
+*** Running vivado
+    with args -log State_Machine_Project_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source State_Machine_Project_Top.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source State_Machine_Project_Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.004 ; gain = 0.023 ; free physical = 17324 ; free virtual = 26882
+Command: read_checkpoint -auto_incremental -incremental /home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/utils_1/imports/synth_1/State_Machine_Project_Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/utils_1/imports/synth_1/State_Machine_Project_Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top State_Machine_Project_Top -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1832297
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2545.789 ; gain = 294.691 ; free physical = 15873 ; free virtual = 25431
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'State_Machine_Project_Top' [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Project_Top.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'Debounce_Filter' [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Debounce_Filter.sv:32]
+	Parameter DEBOUNCE_LIMIT bound to: 250000 - type: integer 
+	Parameter NUM_BUTTONS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Debounce_Filter' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Debounce_Filter.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'State_Machine_Game' [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Game.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Count_And_Toggle' [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Count_And_Toggle.sv:31]
+	Parameter COUNT_LIMIT bound to: 6250000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Count_And_Toggle' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Count_And_Toggle.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/LFSR.sv:2]
+	Parameter N bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/LFSR.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'State_Machine_Game' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Game.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Binary_To_7Segment' [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Binary_To_7Segment.sv:32]
+INFO: [Synth 8-226] default block is never used [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Binary_To_7Segment.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'Binary_To_7Segment' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter6/Self_Contained_Modules/Self_Contained_Modules.srcs/sources_1/new/Binary_To_7Segment.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'State_Machine_Project_Top' (0#1) [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Project_Top.sv:34]
+WARNING: [Synth 8-6014] Unused sequential element r_Pattern_reg[8] was removed.  [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Game.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element r_Pattern_reg[9] was removed.  [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Game.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element r_Pattern_reg[10] was removed.  [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/sources_1/new/State_Machine_Game.sv:124]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2622.758 ; gain = 371.660 ; free physical = 15773 ; free virtual = 25333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2625.727 ; gain = 374.629 ; free physical = 15773 ; free virtual = 25333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2625.727 ; gain = 374.629 ; free physical = 15773 ; free virtual = 25333
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2625.727 ; gain = 0.000 ; free physical = 15773 ; free virtual = 25333
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'PMOD' is not supported in the xdc constraint file. [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'output_port[*]'. [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc:215]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports {output_port[*]}]'. [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc:215]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'input_port[*]'. [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc:260]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_ports {input_port[*]}]'. [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc:260]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.srcs/constrs_1/new/io_map.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/State_Machine_Project_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/State_Machine_Project_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.172 ; gain = 0.000 ; free physical = 15754 ; free virtual = 25313
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2759.207 ; gain = 0.000 ; free physical = 15754 ; free virtual = 25313
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2759.207 ; gain = 508.109 ; free physical = 15749 ; free virtual = 25307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2759.207 ; gain = 508.109 ; free physical = 15749 ; free virtual = 25307
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2759.207 ; gain = 508.109 ; free physical = 15749 ; free virtual = 25307
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'State_Machine_Game'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   START |                              000 |                             0000
+             PATTERN_OFF |                              011 |                             0001
+            PATTERN_SHOW |                              110 |                             0010
+             WAIT_PLAYER |                              100 |                             0011
+              INCR_SCORE |                              001 |                             0100
+                  WINNER |                              010 |                             0110
+                   LOSER |                              101 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'State_Machine_Game'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2759.207 ; gain = 508.109 ; free physical = 15742 ; free virtual = 25301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   23 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   23 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   7 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 9     
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2759.207 ; gain = 508.109 ; free physical = 15736 ; free virtual = 25301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 3196.102 ; gain = 945.004 ; free physical = 15306 ; free virtual = 24869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3231.148 ; gain = 980.051 ; free physical = 15273 ; free virtual = 24837
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15264 ; free virtual = 24828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name               | RTL Name                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|State_Machine_Project_Top | Game_Inst/nolabel_line190/r_LFSR_reg[20] | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------------------+------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |    15|
+|3     |LUT1   |     4|
+|4     |LUT2   |     7|
+|5     |LUT3   |     9|
+|6     |LUT4   |    26|
+|7     |LUT5   |    12|
+|8     |LUT6   |    36|
+|9     |MUXF7  |     2|
+|10    |SRL16E |     1|
+|11    |FDRE   |   159|
+|12    |IBUF   |     5|
+|13    |OBUF   |    11|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.156 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3239.156 ; gain = 854.578 ; free physical = 15261 ; free virtual = 24825
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3239.164 ; gain = 988.059 ; free physical = 15261 ; free virtual = 24825
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3247.156 ; gain = 0.000 ; free physical = 15550 ; free virtual = 25115
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3289.078 ; gain = 0.000 ; free physical = 15538 ; free virtual = 25101
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+
+Synth Design complete | Checksum: 3613c1ac
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 6 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3289.113 ; gain = 1953.109 ; free physical = 15537 ; free virtual = 25101
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2474.605; main = 2474.605; forked = 371.444
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3748.375; main = 3289.082; forked = 989.199
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3313.090 ; gain = 0.000 ; free physical = 15537 ; free virtual = 25101
+INFO: [Common 17-1381] The checkpoint '/home/michael/Documents/personalProj/Nandland/chapter8/Memory_Game/Memory_Game.runs/synth_1/State_Machine_Project_Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file State_Machine_Project_Top_utilization_synth.rpt -pb State_Machine_Project_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  2 12:30:23 2024...
